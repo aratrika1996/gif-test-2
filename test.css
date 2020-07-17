@@ -1,0 +1,17 @@
+#slideshow {
+    position: relative;
+}
+
+#slideshow>div {
+    position: absolute;
+    width: 100%;
+}
+
+.imgif {
+    width: 750px;
+    height: 500px;
+}
+
+.gif {
+    margin: 2rem;
+}

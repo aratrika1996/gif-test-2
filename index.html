@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="test.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/0d17cd1dae.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <section class="title">
+        <div class="gif">
+
+            <div id="slideshow">
+
+                <div>
+                    <img src="ss/1.png" class="imgif">
+                </div>
+                <div>
+                    <img src="ss/2.png" class="imgif">
+                </div>
+                <div>
+                    <img src="ss/3.png" class="imgif">
+                </div>
+                <div>
+                    <img src="ss/4.png" class="imgif">
+                </div>
+                <div>
+                    <img src="ss/5.png" class="imgif">
+                </div>
+                <div>
+                    <img src="ss/6.png" class="imgif">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        $("#slideshow > div:gt(0)").hide();
+
+        setInterval(function() {
+            $('#slideshow > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
+        }, 2000);
+    </script>
+</body>
+
+</html>
